@@ -5,12 +5,13 @@ from django.conf.urls.static import static
 from .yasg import urlpatterns as doc_urls
 
 urlpatterns = [
+    path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
+    #path('api-auth/', include('rest_framework.urls')),
     path('', include('feedback.urls')),
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.authtoken')),
-    path('auth/', include('djoser.urls.jwt')),
+    #path('auth/', include('djoser.urls')),
+    #path('auth/', include('djoser.urls.authtoken')),
+    #path('auth/', include('djoser.urls.jwt')),
 ]
 
 urlpatterns += doc_urls

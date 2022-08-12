@@ -44,3 +44,6 @@ class Feedback(models.Model):
     def __str__(self):
         return f'{self.user} ({self.time_created})'
 
+
+
+
